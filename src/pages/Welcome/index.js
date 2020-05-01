@@ -18,8 +18,10 @@ import {
   boil,
   mcd,
 } from '../../Utils/Asets';
+import ActionButton from '../../Components/Button';
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
+  const handleGoTo = (screen) => navigation.navigate(screen);
   return (
     <View>
       <View stle={{flex: 1}}>
@@ -47,9 +49,11 @@ const Welcome = () => {
         <Text style={styles.wrapper.discover}>
           Discover the best foods from over 1,000 restaurants
         </Text>
-        <View style={styles.wrapper.button}>
-          <Text style={styles.wrapper.textbutton}>Get Started</Text>
-        </View>
+        <ActionButton
+          onPress={() => {
+            handleGoTo('Home');
+          }}
+        />
       </View>
     </View>
   );
@@ -75,25 +79,6 @@ const styles = {
     },
     hapy: {fontSize: 50, color: 'white', marginLeft: 35, marginTop: 10},
     discover: {fontSize: 25, color: 'white', marginLeft: 35, marginTop: 10},
-    button: {
-      marginTop: 20,
-      marginHorizontal: 100,
-      height: 50,
-      width: '50%',
-      backgroundColor: '#5c9eb7',
-      borderRadius: 25,
-      flexWrap: 'wrap',
-      position: 'relative',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    textbutton: {
-      fontSize: 30,
-      flex: 1,
-      marginLeft: 50,
-      color: 'white',
-      position: 'absolute',
-    },
   },
 };
 export default Welcome;

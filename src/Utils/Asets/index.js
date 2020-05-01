@@ -14,8 +14,18 @@ import meat from './img/meat.png';
 import stroberi from './img/strawberry.png';
 import boil from './img/boil.png';
 import mcd from './img/mcd.png';
+import Cari from './icon/search.png';
+import Lis from './icon/list.png';
+import Home from './icon/home.png';
+import ofer from './icon/ofer.png';
+import Akun from './icon/social.png';
 
 export {
+  Akun,
+  ofer,
+  Home,
+  Lis,
+  Cari,
   mcd,
   boil,
   stroberi,
