@@ -17,7 +17,7 @@ const Search = ({placeholder}) => {
             marginTop: 8,
           }}
         />
-        <TextInput style={styles.input} placeholder={placeholder} />
+        <TextInput style={styles.input} placeholder="Search foods" />
       </View>
     </View>
   );

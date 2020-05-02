@@ -1,47 +1,92 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import HomeButton from '../../Components/HomeButton';
 import OferButton from '../../Components/OferButton';
 import AkunButton from '../../Components/AcountButton';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Search} from '../../Components';
 import {List} from '../../Atom';
+import {Mul, burger, Kul1} from '../../Utils/Asets';
+import {
+  Burger,
+  Ayam,
+  Boil,
+  Cakes,
+  Pizza,
+  Lunchbox,
+  Salad,
+} from '../../Components/Card';
+import Coffe from '../../Components/Card/Coffe';
+import {
+  Card1,
+  Card2,
+  Card3,
+  Card4,
+  Card5,
+  Card6,
+} from '../../Components/Card/CardBody';
 
-const BottomMenu = () => {
+const Home = ({navigation}) => {
+  const handleGoTo = (screen) => navigation.navigate(screen);
   return (
     <View>
       <View>
-        <View
-          style={{
-            height: 50,
-            width: '100%',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: 10,
-          }}>
+        <View style={styles.wrapper.del}>
+          <Text>Delivering to</Text>
+        </View>
+        <View style={styles.wrapper.current}>
+          <Text style={styles.wrapper.textcurrent}>Current location</Text>
+          <Image source={Mul} style={styles.wrapper.mul} />
+        </View>
+      </View>
+      <View>
+        <View style={styles.wrapper.searchbar}>
           <Search />
           <List />
         </View>
       </View>
       <View>
-        <ScrollView>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginTop: 15,
-              marginHorizontal: 20,
-              marginBottom: 15,
-            }}>
-            <Text style={{fontSize: 30, color: '#4dbb63'}}>
-              Popular Choices
-            </Text>
-            <Text>Show all</Text>
-          </View>
-        </ScrollView>
+        <View style={styles.wrapper.body}>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              <View style={styles.wrapper.topmenu}>
+                <View style={styles.wrapper.itemmenu}>
+                  <Burger onPress={() => handleGoTo('Burger')} />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Ayam />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Boil />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Cakes />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Coffe />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Pizza />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Lunchbox />
+                </View>
+                <View style={styles.wrapper.itemmenu}>
+                  <Salad />
+                </View>
+              </View>
+            </ScrollView>
+            <View>
+              <Card1 />
+              <Card2 />
+              <Card3 />
+              <Card4 />
+              <Card5 />
+              <Card6 />
+            </View>
+            <View></View>
+          </ScrollView>
+        </View>
       </View>
       <View>
         <View style={styles.wrapper.bottommenu}>
@@ -56,15 +101,43 @@ const BottomMenu = () => {
 
 const styles = {
   wrapper: {
+    del: {marginLeft: 20, marginTop: 8},
+    current: {
+      flexDirection: 'row',
+      width: '100%',
+      height: 30,
+      marginLeft: 20,
+      alignItems: 'center',
+    },
+    textcurrent: {fontSize: 20, fontWeight: 'bold'},
+    mul: {height: 7, width: 15, marginLeft: 12, marginTop: 5},
+    searchbar: {
+      height: 50,
+      width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: 5,
+      marginLeft: -8,
+    },
+    body: {
+      marginTop: 15,
+      height: 471,
+    },
+    topmenu: {
+      flexDirection: 'row',
+      marginLeft: 18,
+      justifyContent: 'space-between',
+    },
+    itemmenu: {marginRight: 15},
     bottommenu: {
       height: 60,
       width: '100%',
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      backgroundColor: 'yellow',
       paddingHorizontal: 20,
     },
   },
 };
-export default BottomMenu;
+export default Home;
