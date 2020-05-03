@@ -11,7 +11,7 @@ const Button = ({onPress}) => {
         style={{justifyContent: 'center', alignItems: 'center'}}>
         <Image
           source={back}
-          style={{height: 36, width: 2, paddingHorizontal: 18}}
+          style={{height: 20, width: 2, paddingHorizontal: 18}}
         />
       </TouchableOpacity>
     </View>

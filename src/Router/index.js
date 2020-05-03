@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Welcome, Home} from '../pages';
+import {Welcome, Home, OfferPage} from '../pages';
 import {BurgerPage} from '../pages/MenuPage';
 
 const Stack = createStackNavigator();
@@ -9,6 +9,11 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        name="Offer"
+        component={OfferPage}
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         name="welcome"
         component={Welcome}

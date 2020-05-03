@@ -56,7 +56,7 @@ const Burgerpage = ({navigation}) => {
       <View>
         <View style={styles.wrapper.bottommenu}>
           <HomeButton onPress={() => handleGoTo('Home')} />
-          <OferButton />
+          <OferButton onPress={() => handleGoTo('Offer')} />
           <AkunButton />
         </View>
       </View>
@@ -75,7 +75,7 @@ const styles = {
       marginTop: 20,
     },
     textpop: {fontSize: 35, color: '#4dbb63', fontWeight: 'bold'},
-    body: {height: 541, marginTop: 15},
+    body: {height: 536, marginTop: 15},
     bottommenu: {
       height: 60,
       width: '100%',

@@ -12,7 +12,7 @@ const Button = ({onPress}) => {
         <Text style={styles.text}>Hollywood stars cafe</Text>
         <View style={{flexDirection: 'row'}}>
           <Image source={Stars} style={{height: 15, width: 15}} />
-          <Text style={{fontSize: 15, marginLeft: 5}}>4.9 (124 ratings) </Text>
+          <Text style={styles.text49}>4.9 (124 ratings) </Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -24,6 +24,7 @@ const Cards = ({onPress}) => {
 };
 
 const styles = {
+  text49: {fontSize: 15, marginLeft: 5},
   wrapper: {
     height: 250,
     width: 380,

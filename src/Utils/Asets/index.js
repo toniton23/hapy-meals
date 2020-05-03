@@ -30,10 +30,14 @@ import Stars from './icon/star.png';
 import colors from './colors';
 import bur1 from './img/bur1.jpg';
 import bur2 from './img/bur2.jpg';
-import back from './img/back.png';
+import back from './img/arrows.png';
+import vespa from './img/scooter.png';
+import line from './img/minus.png';
 
 export {colors};
 export {
+  line,
+  vespa,
   back,
   bur1,
   bur2,
