@@ -1,5 +1,5 @@
 import Welcome from './Welcome';
 import Home from './Home';
-import BurgerPage from './MenuPage';
 
-export {Welcome, Home, BurgerPage};
+export {Welcome, Home};
+export * from './MenuPage';

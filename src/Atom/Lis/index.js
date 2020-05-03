@@ -5,7 +5,10 @@ import {Lis} from '../../Utils/Asets';
 const List = () => {
   return (
     <View>
-      <Image source={Lis} style={{height: 30, width: 30}} />
+      <Image
+        source={Lis}
+        style={{height: 30, width: 20, marginRight: 58, marginLeft: -10}}
+      />
     </View>
   );
 };

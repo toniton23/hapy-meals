@@ -5,18 +5,8 @@ import {Cari} from '../../Utils/Asets';
 const Search = ({placeholder}) => {
   return (
     <View>
-      <View
-        style={{flexDirection: 'row', flexWrap: 'wrap', position: 'relative'}}>
-        <Image
-          source={Cari}
-          style={{
-            height: 25,
-            width: 25,
-            marginLeft: 20,
-            position: 'absolute',
-            marginTop: 8,
-          }}
-        />
+      <View style={styles.wrapper}>
+        <Image source={Cari} style={styles.image} />
         <TextInput style={styles.input} placeholder="Search foods" />
       </View>
     </View>
@@ -24,6 +14,19 @@ const Search = ({placeholder}) => {
 };
 
 const styles = {
+  image: {
+    height: 25,
+    width: 25,
+    marginLeft: 20,
+    position: 'absolute',
+    marginTop: 8,
+  },
+  wrapper: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginLeft: 15,
+    position: 'relative',
+  },
   input: {
     borderWidth: 1,
     paddingLeft: 60,

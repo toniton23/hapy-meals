@@ -27,8 +27,16 @@ import Kul4 from './img/kul4.jpg';
 import Kul5 from './img/kul5.jpg';
 import Kul6 from './img/kul6.jpg';
 import Stars from './icon/star.png';
+import colors from './colors';
+import bur1 from './img/bur1.jpg';
+import bur2 from './img/bur2.jpg';
+import back from './img/back.png';
 
+export {colors};
 export {
+  back,
+  bur1,
+  bur2,
   Stars,
   Kul2,
   Kul3,

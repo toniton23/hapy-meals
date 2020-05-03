@@ -9,3 +9,4 @@ import Salad from './Salad';
 import Card1 from './CardBody';
 
 export {Card1, Burger, Ayam, Boil, Salad, Cakes, Coffe, Pizza, Lunchbox};
+export * from './CardBody';

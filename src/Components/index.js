@@ -3,7 +3,8 @@ import Homebutton from './HomeButton';
 import Oferbuton from './OferButton';
 import Search from './Search';
 import AkunButton from './AcountButton';
-import Burger from './Card';
+import BackButton from './BackButton';
 
-export {Button, Homebutton, Oferbuton, Search, AkunButton};
-export {Burger};
+export {Button, BackButton, Homebutton, Oferbuton, Search, AkunButton};
+
+export * from './Card';
