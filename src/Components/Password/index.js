@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {Akun} from '../../Utils/Asets';
 
 const Button = ({onPress}) => {
   return (
@@ -9,8 +8,9 @@ const Button = ({onPress}) => {
       <TouchableOpacity
         onPress={onPress}
         style={{justifyContent: 'center', alignItems: 'center'}}>
-        <Image source={Akun} style={{height: 30, width: 30}} />
-        <Text style={{fontWeight: 'bold'}}>Account</Text>
+        <Text style={{fontSize: 17, color: '#4dbb63', marginLeft: 5}}>
+          Password
+        </Text>
       </TouchableOpacity>
     </View>
   );

@@ -55,7 +55,7 @@ const Home = ({navigation}) => {
         <View style={styles.wrapper.bottommenu}>
           <HomeButton onPress={() => handleGoTo('Home')} />
           <OferButton />
-          <AkunButton />
+          <AkunButton onPress={() => handleGoTo('Akun')} />
         </View>
       </View>
     </View>

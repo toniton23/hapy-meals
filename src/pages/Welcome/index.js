@@ -20,7 +20,7 @@ import {
 } from '../../Utils/Asets';
 import ActionButton from '../../Components/Button';
 
-const Welcome = ({navigation}) => {
+const Welcome = ({navigation, title}) => {
   const handleGoTo = (screen) => navigation.navigate(screen);
   return (
     <View>

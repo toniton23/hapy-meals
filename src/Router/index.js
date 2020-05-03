@@ -1,7 +1,14 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Welcome, Home, OfferPage} from '../pages';
+import {
+  Welcome,
+  Home,
+  OfferPage,
+  AkunPage,
+  Login,
+  PasswordPage,
+} from '../pages';
 import {BurgerPage} from '../pages/MenuPage';
 
 const Stack = createStackNavigator();
@@ -10,13 +17,18 @@ const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Offer"
-        component={OfferPage}
+        name="welcome"
+        component={Welcome}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="welcome"
-        component={Welcome}
+        name="Akun"
+        component={AkunPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Offer"
+        component={OfferPage}
         options={{headerShown: false}}
       />
       <Stack.Screen
@@ -27,6 +39,16 @@ const Router = () => {
       <Stack.Screen
         name="Burger"
         component={BurgerPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Password"
+        component={PasswordPage}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
