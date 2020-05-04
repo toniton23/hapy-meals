@@ -26,6 +26,7 @@ const Cards = ({onPress}) => {
 const styles = {
   text49: {fontSize: 15, marginLeft: 5},
   wrapper: {
+    borderWidth: 1,
     height: 250,
     width: 380,
     backgroundColor: '#f2d8b3',

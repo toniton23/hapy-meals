@@ -8,8 +8,9 @@ import {
   AkunPage,
   Login,
   PasswordPage,
+  Popular,
+  BuurgerPage,
 } from '../pages';
-import {BurgerPage} from '../pages/MenuPage';
 
 const Stack = createStackNavigator();
 
@@ -37,11 +38,6 @@ const Router = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Burger"
-        component={BurgerPage}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
         name="Login"
         component={Login}
         options={{headerShown: false}}
@@ -49,6 +45,16 @@ const Router = () => {
       <Stack.Screen
         name="Password"
         component={PasswordPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Popular"
+        component={Popular}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Burger"
+        component={BuurgerPage}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

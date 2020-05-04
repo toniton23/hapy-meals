@@ -1,21 +1,21 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import {Kul3, Stars} from '../../../../Utils/Asets';
+import {bur1, Stars} from '../../../../../Utils/Asets';
 
 const index = () => {
   return (
     <View>
       <View style={styles.wrapper}>
         <View style={styles.cardimage}>
-          <Image source={Kul3} style={styles.image} />
+          <Image source={bur1} style={styles.image} />
         </View>
         <View style={styles.wrapperfast}>
-          <Text style={styles.textfast}>Ayam Bakar Ojolali</Text>
-          <Text style={{marginTop: 5}}>Cafe: local food</Text>
+          <Text style={styles.textfast}>JOsh Burger</Text>
+          <Text style={{marginTop: 5}}>Cafe: western food</Text>
           <View style={styles.wrapperstars}>
             <Image source={Stars} style={styles.stars} />
-            <Text style={styles.text49}>4.5</Text>
-            <Text style={{marginLeft: 8}}>(104 ratings)</Text>
+            <Text style={styles.text49}>4.7</Text>
+            <Text style={{marginLeft: 8}}>(184 ratings)</Text>
           </View>
         </View>
       </View>

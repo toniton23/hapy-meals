@@ -4,7 +4,7 @@ import HomeButton from '../../Components/HomeButton';
 import OferButton from '../../Components/OferButton';
 import AkunButton from '../../Components/AcountButton';
 import {ScrollView} from 'react-native-gesture-handler';
-import {Search} from '../../Components';
+import {Search, PopularButton} from '../../Components';
 import {List} from '../../Atom';
 import {Mul, burger, Kul1} from '../../Utils/Asets';
 import {
@@ -42,7 +42,7 @@ const Home = ({navigation}) => {
       <View>
         <View style={styles.wrapper.searchbar}>
           <Search />
-          <List />
+          <PopularButton onPress={() => handleGoTo('Popular')} />
         </View>
       </View>
       <View>
@@ -118,7 +118,7 @@ const styles = {
       justifyContent: 'center',
       alignItems: 'center',
       marginTop: 5,
-      marginLeft: -8,
+      justifyContent: 'space-between',
     },
     body: {
       marginTop: 15,

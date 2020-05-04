@@ -33,9 +33,11 @@ import bur2 from './img/bur2.jpg';
 import back from './img/arrows.png';
 import vespa from './img/scooter.png';
 import line from './img/minus.png';
+import backwhite from './img/back.png';
 
 export {colors};
 export {
+  backwhite,
   line,
   vespa,
   back,

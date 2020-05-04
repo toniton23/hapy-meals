@@ -14,3 +14,4 @@ import Burger3 from './Burger3';
 
 export {Card1, Card2, Card3, Card4, Card5, Card6};
 export {Burger1, Burger2, Burger3, CardFastGood, NewRest1, NewRest2, NewRest3};
+export * from './CardBurger';

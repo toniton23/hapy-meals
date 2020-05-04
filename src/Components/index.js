@@ -6,8 +6,12 @@ import AkunButton from './AcountButton';
 import BackButton from './BackButton';
 import LoginButton from './LoginButton';
 import PasswordButton from './Password';
+import PopularButton from './PopularButton';
+import BackWhite from './Backwhite';
 
 export {
+  BackWhite,
+  PopularButton,
   PasswordButton,
   Button,
   BackButton,
