@@ -6,8 +6,10 @@ import Login from './Login';
 import PasswordPage from './PasswordPage';
 import Popular from './PopularPage';
 import BuurgerPage from './BuurgerPage';
+import MapsPage from './MapsPage';
 
 export {
+  MapsPage,
   Welcome,
   Home,
   OfferPage,

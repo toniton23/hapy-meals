@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
   Welcome,
@@ -10,6 +9,7 @@ import {
   PasswordPage,
   Popular,
   BuurgerPage,
+  MapsPage,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -55,6 +55,11 @@ const Router = () => {
       <Stack.Screen
         name="Burger"
         component={BuurgerPage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Maps"
+        component={MapsPage}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

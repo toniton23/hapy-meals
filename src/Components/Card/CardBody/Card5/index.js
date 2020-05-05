@@ -4,7 +4,7 @@ import {Kul4, Stars} from '../../../../Utils/Asets';
 
 const Button = ({onPress}) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <View>
       <View style={styles.wrapper}>
         <Image source={Kul4} style={styles.image} />
       </View>
@@ -15,7 +15,7 @@ const Button = ({onPress}) => {
           <Text style={{fontSize: 15, marginLeft: 5}}>4.8 (139 ratings) </Text>
         </View>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 

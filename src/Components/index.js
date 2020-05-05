@@ -8,8 +8,10 @@ import LoginButton from './LoginButton';
 import PasswordButton from './Password';
 import PopularButton from './PopularButton';
 import BackWhite from './Backwhite';
+import MulButton from './MulButton';
 
 export {
+  MulButton,
   BackWhite,
   PopularButton,
   PasswordButton,

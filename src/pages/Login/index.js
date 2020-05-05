@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text} from 'react-native';
 import {BackButton, PasswordButton} from '../../Components';
 import {Input, ButtonAll} from '../../Atom';
 
-const index = ({navigation, title}) => {
+const Login = ({navigation, title}) => {
+  const [form, setForm] = useState({
+    username: 'toniton23',
+    password: 'sudahngantuk',
+  });
+  const sendData = () => {
+    console.log('data yang dikirim', form);
+  };
+  const onInputChange = (value, input) => {
+    setForm({
+      ...form,
+      [input]: value,
+    });
+  };
   const handleGoTo = (screen) => navigation.navigate(screen);
   return (
     <View>
@@ -15,13 +28,22 @@ const index = ({navigation, title}) => {
       </View>
       <View style={{marginLeft: 10}}>
         <View style={styles.wrapperinput}>
-          <Input title="Username or Email" />
+          <Input
+            title="Username or Email"
+            value={form.username}
+            onChangeText={(value) => onInputChange(value, 'username')}
+          />
         </View>
         <View style={{marginBottom: 20}}>
-          <Input title="Password" />
+          <Input
+            title="Password"
+            value={form.password}
+            onChangeText={(value) => onInputChange(value, 'password')}
+            secureTextEntry={true}
+          />
         </View>
       </View>
-      <ButtonAll title="LOGIN" />
+      <ButtonAll title="LOGIN" onPress={sendData} />
       <View
         style={{
           flexDirection: 'row',
@@ -46,4 +68,4 @@ const styles = {
   wrapperinput: {marginBottom: 20, marginTop: 50},
   back: {marginTop: 15, marginLeft: -350},
 };
-export default index;
+export default Login;

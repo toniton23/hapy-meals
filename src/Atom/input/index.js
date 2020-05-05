@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text, TextInput, Image} from 'react-native';
 
-const Search = ({placeholder, title}) => {
+const Search = ({placeholder, title, ...rest}) => {
   return (
     <View>
       <View style={styles.wrapper}>
-        <TextInput style={styles.input} placeholder={title} />
+        <TextInput style={styles.input} placeholder={title} {...rest} />
       </View>
     </View>
   );

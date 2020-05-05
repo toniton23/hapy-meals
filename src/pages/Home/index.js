@@ -4,7 +4,7 @@ import HomeButton from '../../Components/HomeButton';
 import OferButton from '../../Components/OferButton';
 import AkunButton from '../../Components/AcountButton';
 import {ScrollView} from 'react-native-gesture-handler';
-import {Search, PopularButton} from '../../Components';
+import {Search, PopularButton, MulButton} from '../../Components';
 import {List} from '../../Atom';
 import {Mul, burger, Kul1} from '../../Utils/Asets';
 import {
@@ -36,7 +36,6 @@ const Home = ({navigation}) => {
         </View>
         <View style={styles.wrapper.current}>
           <Text style={styles.wrapper.textcurrent}>Current location</Text>
-          <Image source={Mul} style={styles.wrapper.mul} />
         </View>
       </View>
       <View>
@@ -110,7 +109,6 @@ const styles = {
       alignItems: 'center',
     },
     textcurrent: {fontSize: 20, fontWeight: 'bold'},
-    mul: {height: 7, width: 15, marginLeft: 12, marginTop: 5},
     searchbar: {
       height: 50,
       width: '100%',

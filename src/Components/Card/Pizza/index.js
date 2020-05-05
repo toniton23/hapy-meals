@@ -4,14 +4,14 @@ import {pizza} from '../../../Utils/Asets';
 
 const Button = ({onPress}) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <View>
       <View style={styles.wrapper}>
         <Image source={pizza} style={styles.image} />
       </View>
       <View style={styles.wrappertext}>
         <Text style={styles.text}>Pizza</Text>
       </View>
-    </TouchableOpacity>
+    </View>
   );
 };
 
