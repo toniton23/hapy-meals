@@ -23,26 +23,24 @@ import ActionButton from '../../Components/Button';
 const Welcome = ({navigation, title}) => {
   const handleGoTo = (screen) => navigation.navigate(screen);
   return (
-    <View>
-      <View stle={{flex: 1}}>
-        <View style={styles.wrapper.body}>
-          <Image source={Nasi} style={styles.wrapper.image} />
-          <Image source={Ayam} style={styles.wrapper.image} />
-          <Image source={kentang} style={styles.wrapper.image} />
-          <Image source={burger} style={styles.wrapper.image} />
-          <Image source={pizza} style={styles.wrapper.image} />
-          <Image source={slice} style={styles.wrapper.image} />
-          <Image source={salad} style={styles.wrapper.image} />
-          <Image source={kopi} style={styles.wrapper.image} />
-          <Image source={lunch} style={styles.wrapper.image} />
-          <Image source={juice} style={styles.wrapper.image} />
-          <Image source={food} style={styles.wrapper.image} />
-          <Image source={ikan} style={styles.wrapper.image} />
-          <Image source={meat} style={styles.wrapper.image} />
-          <Image source={stroberi} style={styles.wrapper.image} />
-          <Image source={boil} style={styles.wrapper.image} />
-          <Image source={mcd} style={styles.wrapper.image} />
-        </View>
+    <View style={{flex: 1}}>
+      <View style={styles.wrapper.body}>
+        <Image source={Nasi} style={styles.wrapper.image} />
+        <Image source={Ayam} style={styles.wrapper.image} />
+        <Image source={kentang} style={styles.wrapper.image} />
+        <Image source={burger} style={styles.wrapper.image} />
+        <Image source={pizza} style={styles.wrapper.image} />
+        <Image source={slice} style={styles.wrapper.image} />
+        <Image source={salad} style={styles.wrapper.image} />
+        <Image source={kopi} style={styles.wrapper.image} />
+        <Image source={lunch} style={styles.wrapper.image} />
+        <Image source={juice} style={styles.wrapper.image} />
+        <Image source={food} style={styles.wrapper.image} />
+        <Image source={ikan} style={styles.wrapper.image} />
+        <Image source={meat} style={styles.wrapper.image} />
+        <Image source={stroberi} style={styles.wrapper.image} />
+        <Image source={boil} style={styles.wrapper.image} />
+        <Image source={mcd} style={styles.wrapper.image} />
       </View>
       <View style={styles.wrapper.card}>
         <Text style={styles.wrapper.hapy}>Happy Meals</Text>
@@ -62,16 +60,15 @@ const Welcome = ({navigation, title}) => {
 const styles = {
   wrapper: {
     body: {
-      height: 400,
+      height: '60%',
       width: '80%',
-      backgroundColor: '#fbf5f2',
       flexWrap: 'wrap',
       marginTop: 20,
       marginHorizontal: 35,
     },
     image: {height: 65, width: 65, margin: 10},
     card: {
-      height: 300,
+      height: '40%',
       width: '100%',
       backgroundColor: '#4dbb63',
       borderTopLeftRadius: 45,

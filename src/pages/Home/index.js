@@ -1,141 +1,119 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
-import HomeButton from '../../Components/HomeButton';
-import OferButton from '../../Components/OferButton';
-import AkunButton from '../../Components/AcountButton';
-import {ScrollView} from 'react-native-gesture-handler';
-import {Search, PopularButton, MulButton} from '../../Components';
-import {List} from '../../Atom';
-import {Mul, burger, Kul1} from '../../Utils/Asets';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import {
+  Search,
+  PopularButton,
+  MulButton,
   Burger,
-  Ayam,
-  Boil,
-  Cakes,
-  Pizza,
-  Lunchbox,
-  Salad,
-} from '../../Components/Card';
-import Coffe from '../../Components/Card/Coffe';
-import {
-  Card1,
-  Card2,
-  Card3,
-  Card4,
-  Card5,
-  Card6,
-} from '../../Components/Card/CardBody';
+  CardMenu,
+} from '../../Components';
+import {ScrollView} from 'react-native-gesture-handler';
+import {Ayams} from '../../Components';
+import {Chiken, Kul1, Stars} from '../../Utils/Asets';
 
-const Home = ({navigation}) => {
-  const handleGoTo = (screen) => navigation.navigate(screen);
+const index = () => {
   return (
     <View>
-      <View>
-        <View style={styles.wrapper.del}>
-          <Text>Delivering to</Text>
+      <View style={styles.wrapper}>
+        <View style={styles.top}>
+          <View style={styles.del}>
+            <Text>Delivering to</Text>
+          </View>
+          <View style={styles.current}>
+            <Text style={styles.textcurrent}>Current location</Text>
+          </View>
+          <View style={styles.searchbar}>
+            <Search />
+            <View style={styles.popular}>
+              <PopularButton onPress={() => handleGoTo('Popular')} />
+            </View>
+          </View>
         </View>
-        <View style={styles.wrapper.current}>
-          <Text style={styles.wrapper.textcurrent}>Current location</Text>
-        </View>
-      </View>
-      <View>
-        <View style={styles.wrapper.searchbar}>
-          <Search />
-          <PopularButton onPress={() => handleGoTo('Popular')} />
-        </View>
-      </View>
-      <View>
-        <View style={styles.wrapper.body}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              <View style={styles.wrapper.topmenu}>
-                <View style={styles.wrapper.itemmenu}>
+        <View style={styles.body}>
+          <ScrollView showsHorizontalScrollIndicator={false}>
+            <ScrollView showsHorizontalScrollIndicator={false}>
+              <View style={styles.topmenu}>
+                <View style={styles.itemmenu}>
                   <Burger onPress={() => handleGoTo('Burger')} />
                 </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Ayam />
-                </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Boil />
-                </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Cakes />
-                </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Coffe />
-                </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Pizza />
-                </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Lunchbox />
-                </View>
-                <View style={styles.wrapper.itemmenu}>
-                  <Salad />
+                <View style={styles.itemmenu}>
+                  <Ayams image={Chiken} />
                 </View>
               </View>
             </ScrollView>
             <View>
-              <Card1 />
-              <Card2 />
-              <Card3 />
-              <Card4 />
-              <Card5 />
-              <Card6 />
+              <View
+                style={{
+                  width: '90%',
+                  marginHorizontal: '5%',
+                  marginTop: 10,
+                }}>
+                <CardMenu
+                  image={Kul1}
+                  cafe="holwood Stars Cafe"
+                  text="4.9 (124 ratings)"
+                />
+                <CardMenu
+                  image={Kul1}
+                  cafe="holwood Stars Cafe"
+                  text="4.9 (124 ratings)"
+                />
+                <CardMenu
+                  image={Kul1}
+                  cafe="holwood Stars Cafe"
+                  text="4.9 (124 ratings)"
+                />
+                <CardMenu
+                  image={Kul1}
+                  cafe="holwood Stars Cafe"
+                  text="4.9 (124 ratings)"
+                />
+              </View>
             </View>
-            <View></View>
           </ScrollView>
         </View>
-      </View>
-      <View>
-        <View style={styles.wrapper.bottommenu}>
-          <HomeButton />
-          <OferButton onPress={() => handleGoTo('Offer')} />
-          <AkunButton onPress={() => handleGoTo('Akun')} />
-        </View>
+        <View style={styles.bottom}></View>
       </View>
     </View>
   );
 };
 
-const styles = {
-  wrapper: {
-    del: {marginLeft: 20, marginTop: 8},
-    current: {
-      flexDirection: 'row',
-      width: '100%',
-      height: 30,
-      marginLeft: 20,
-      alignItems: 'center',
-    },
-    textcurrent: {fontSize: 20, fontWeight: 'bold'},
-    searchbar: {
-      height: 50,
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 5,
-      justifyContent: 'space-between',
-    },
-    body: {
-      marginTop: 15,
-      height: 471,
-    },
-    topmenu: {
-      flexDirection: 'row',
-      marginLeft: 18,
-      justifyContent: 'space-between',
-    },
-    itemmenu: {marginRight: 15},
-    bottommenu: {
-      height: 60,
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      paddingHorizontal: 20,
-    },
+export default index;
+
+const styles = StyleSheet.create({
+  itemmenu: {marginRight: 10},
+  topmenu: {
+    flexDirection: 'row',
+    marginLeft: 18,
+    justifyContent: 'space-between',
+    height: 80,
+    backgroundColor: 'pink',
   },
-};
-export default Home;
+  popular: {marginTop: 15, marginRight: 18},
+  searchbar: {
+    width: '100%',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    marginTop: 15,
+  },
+  textcurrent: {fontSize: 20, fontWeight: 'bold'},
+  current: {
+    flexDirection: 'row',
+    width: '100%',
+    height: 30,
+    marginLeft: 20,
+    alignItems: 'center',
+  },
+  del: {marginLeft: 20, marginTop: 18, width: '100%'},
+  bottom: {
+    backgroundColor: 'blue',
+    width: '100%',
+    height: '10%',
+  },
+  body: {
+    width: '100%',
+    height: '70%',
+  },
+  top: {width: '100%', height: '20%'},
+  wrapper: {width: '100%', height: '100%'},
+});

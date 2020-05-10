@@ -6,11 +6,11 @@ import {Form} from 'native-base';
 import {useSelector} from 'react-redux';
 
 const Register = ({navigation, title}) => {
-  const globalState = useSelector((state) => state);
+  const RegisterReducer = useSelector((state) => state.RegisterReducer);
   const [form, setForm] = useState({
-    username: 'toniton23',
-    email: 'toniton23@gmail.com',
-    password: 'apaajaboleh',
+    username: '',
+    email: '',
+    password: '',
   });
   const sendData = () => {
     console.log('Data yang di kirim', form);
@@ -24,12 +24,17 @@ const Register = ({navigation, title}) => {
   const handleGoTo = (screen) => navigation.navigate(screen);
   return (
     <View>
-      <View style={{marginTop: 15, marginLeft: -350}}>
+      <View
+        style={{
+          marginTop: 15,
+          width: 20,
+          marginLeft: 28,
+        }}>
         <BackButton onPress={() => handleGoTo('Home')} />
       </View>
       <View>
         <Text style={styles.textcreate}>
-          Create your account {globalState.name}
+          Create your account {RegisterReducer.title}
         </Text>
       </View>
       <View style={{marginLeft: 10}}>
@@ -65,7 +70,7 @@ const Register = ({navigation, title}) => {
           By clicking register you agree to the our terms and condition
         </Text>
       </View>
-      <View style={{marginTop: 70, marginLeft: 80, flexDirection: 'row'}}>
+      <View style={{marginTop: 0, marginLeft: 80, flexDirection: 'row'}}>
         <Text style={{fontSize: 17}}>Already have an account?</Text>
         <LoginButton onPress={() => handleGoTo('Login')} />
       </View>

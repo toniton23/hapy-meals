@@ -15,7 +15,7 @@ const Home = ({navigation, onPress}) => {
     <View>
       <View style={styles.wrapper.topcard}>
         <ImageBackground source={bur1} style={styles.wrapper.topimage}>
-          <View style={{marginLeft: -350, marginTop: 15}}>
+          <View style={{width: 20, marginLeft: 28, marginTop: 15}}>
             <BackWhite onPress={() => handleGoTo('Home')} />
           </View>
           <Text style={styles.wrapper.textburger}>Burgers</Text>

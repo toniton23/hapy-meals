@@ -1,21 +1,21 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import {Ayam} from '../../../Utils/Asets';
+import {Chiken} from '../../../Utils/Asets';
 
-const Button = ({onPress}) => {
+const Button = (props) => {
   return (
     <View>
       <View style={styles.wrapper}>
-        <Image source={Ayam} style={styles.image} />
+        <Image source={props.image} style={styles.image} />
       </View>
       <View style={styles.wrappertext}>
-        <Text style={styles.text}>Chicken</Text>
+        <Text style={styles.text}>{props.text}</Text>
       </View>
     </View>
   );
 };
 
-const Ayams = ({onPress}) => {
+const Boils = ({onPress}) => {
   return <Button onPress={onPress} />;
 };
 
@@ -38,4 +38,4 @@ const styles = {
   },
   text: {fontWeight: 'bold'},
 };
-export default Ayams;
+export default Boils;

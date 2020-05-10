@@ -66,6 +66,6 @@ const styles = {
     marginTop: 30,
   },
   wrapperinput: {marginBottom: 20, marginTop: 50},
-  back: {marginTop: 15, marginLeft: -350},
+  back: {marginTop: 15, width: 20, marginLeft: 28},
 };
 export default Login;

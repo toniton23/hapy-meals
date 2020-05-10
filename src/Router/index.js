@@ -18,6 +18,11 @@ const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
         name="welcome"
         component={Welcome}
         options={{headerShown: false}}
@@ -32,11 +37,7 @@ const Router = () => {
         component={OfferPage}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{headerShown: false}}
-      />
+
       <Stack.Screen
         name="Login"
         component={Login}

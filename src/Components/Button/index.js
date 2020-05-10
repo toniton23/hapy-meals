@@ -24,22 +24,19 @@ const styles = {
   wrapper: {
     button: {
       marginTop: 20,
-      marginHorizontal: 100,
+      marginHorizontal: '25%',
       height: 50,
       width: '50%',
       backgroundColor: '#5c9eb7',
       borderRadius: 25,
-      flexWrap: 'wrap',
-      position: 'relative',
       justifyContent: 'center',
       alignItems: 'center',
     },
     textbutton: {
-      fontSize: 30,
+      fontSize: 25,
       flex: 1,
-      marginLeft: 50,
       color: 'white',
-      position: 'absolute',
+      marginTop: 5,
     },
   },
 };

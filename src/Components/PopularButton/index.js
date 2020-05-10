@@ -1,19 +1,16 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {colors} from '../../Utils/Asets/colors';
 
 const Button = ({onPress}) => {
   return (
     <View>
-      <TouchableOpacity
-        onPress={onPress}
-        style={{justifyContent: 'center', alignItems: 'center'}}>
+      <TouchableOpacity onPress={onPress}>
         <Text
           style={{
             fontSize: 17,
-            color: '#4dbb63',
-            marginRight: 130,
-            marginLeft: 19,
+            color: colors.default,
           }}>
           Popular choices
         </Text>

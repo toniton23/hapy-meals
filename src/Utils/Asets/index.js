@@ -1,5 +1,5 @@
 import Nasi from './img/cup.png';
-import Ayam from './img/ayam.png';
+import Chiken from './img/ayam.png';
 import kentang from './img/kentang.png';
 import burger from './img/burger.png';
 import pizza from './img/pizza.png';
@@ -62,7 +62,7 @@ export {
   meat,
   ikan,
   Nasi,
-  Ayam,
+  Chiken,
   kentang,
   juice,
   food,

@@ -42,6 +42,6 @@ const styles = {
     marginTop: 30,
   },
   wrapperinput: {marginBottom: 20, marginTop: 50},
-  back: {marginTop: 15, marginLeft: -350},
+  back: {width: 20, marginLeft: 28, marginTop: 15},
 };
 export default index;
